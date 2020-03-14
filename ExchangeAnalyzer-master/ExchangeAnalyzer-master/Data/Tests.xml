@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<Tests>
+
+	<Test>
+		<Id>EXSRV001</Id>
+		<Category>Exchange Servers</Category>
+		<Name>Exchange Versions</Name>
+		<Description>Exchange Analyzer supports Exchange Server 2013, 2016 and 2019.</Description>
+		<IfInfoComments>One or more Exchange servers exist that are not running Exchange 2013, 2016 or 2019.</IfInfoComments>
+		<IfPassedComments>All Exchange servers in the organization are Exchange 2013/2016/2019.</IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments></IfFailedComments>
+	</Test>
+	
+	<Test>
+		<Id>EXSRV002</Id>
+		<Category>Exchange Servers</Category>
+		<Name>Build Numbers</Name>
+		<Description>Check if Exchange Servers are running the latest build.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>All Exchange Server 2013/2016/2019 servers are running the latest build.</IfPassedComments>
+		<IfWarningComments>One or more Exchange Server 2013/2016/2019 servers are not running the latest build.</IfWarningComments>
+		<IfFailedComments>One or more Exchange Server 2013/2016/2019 servers are not running the latest build.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>EXSRV003</Id>
+		<Category>Exchange Servers</Category>
+		<Name>.NET Framework Versions</Name>
+		<Description>Check if Exchange Servers are running the a supported version of .NET Framework.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>All Exchange Server 2013/2016/2019 servers are running supported versions of .NET Framework.</IfPassedComments>
+		<IfWarningComments>One or more Exchange Server 2013/2016/2019 servers are not running a supported combination of Exchange and .NET Framework.</IfWarningComments>
+		<IfFailedComments>One or more Exchange Server 2013/2016/2019 servers are not running a supported combination of Exchange and .NET Framework.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>CAS001</Id>
+		<Category>Client Access</Category>
+		<Name>Client Access Namespaces</Name>
+		<Description>Check if multiple namespaces exist for a protocol within the same AD site.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>All Exchange sites have a single namespace per HTTPS protocol.</IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments>One or more Exchange sites has more than one namespace per HTTPS protocol.</IfFailedComments>
+	</Test>
+	
+	<Test>
+		<Id>CAS002</Id>
+		<Category>Client Access</Category>
+		<Name>Server FQDNs in URLs</Name>
+		<Description>Check that CAS URLs don't contain server FQDNs.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>No Exchange HTTPS services have URLs containing server FQDNs.</IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments>One or more Exchange HTTPS services has a URL containing server FQDNs.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>CAS003</Id>
+		<Category>Client Access</Category>
+		<Name>SSL 3.0 Support</Name>
+		<Description>Check that SSL 3.0 protocol support is disabled</Description>
+        <IfInfoComments></IfInfoComments>
+        <IfPassedComments>All Exchange servers have SSL 3.0 disabled.</IfPassedComments>
+		<IfWarningComments>One or more Exchange servers could not be checked for SSL 3.0 status.</IfWarningComments>
+        <IfFailedComments>One or more Exchange servers do not have SSL 3.0 disabled.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>CAS005</Id>
+		<Category>Client Access</Category>
+		<Name>TTL on DNS Entries</Name>
+		<Description>Check that TTLs on DNS entries for CAS namespaces are not excessive</Description>
+        <IfInfoComments></IfInfoComments>
+        <IfPassedComments>All CAS namespace DNS records have acceptable TTLs.</IfPassedComments>
+		<IfWarningComments>One or more CAS namespace DNS records have high TTLs.</IfWarningComments>
+        <IfFailedComments>One or more CAS namespace DNS records have excessively high TTLs.</IfFailedComments>
+	</Test>
+	
+    <Test>
+		<Id>POP001</Id>
+		<Category>POP</Category>
+		<Name>POP Service Status</Name>
+		<Description>Check the status of the POP services.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments></IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments></IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>POP002</Id>
+		<Category>POP</Category>
+		<Name>POP Secure Login</Name>
+		<Description>Check that insecure POP logins are not permitted.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>No POP services allow insecure logins.</IfPassedComments>
+		<IfWarningComments>One or more POP services may allow insecure logins.</IfWarningComments>
+		<IfFailedComments>One or more POP services allows insecure login.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>POP003</Id>
+		<Category>POP</Category>
+		<Name>POP Protocol Logging</Name>
+		<Description>Check that protocol logging is not enabled for POP.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>No POP services have protocol logging enabled.</IfPassedComments>
+		<IfWarningComments>One or more POP services has protocol logging enabled.</IfWarningComments>
+		<IfFailedComments></IfFailedComments>
+	</Test>
+
+    <Test>
+		<Id>IMAP001</Id>
+		<Category>IMAP</Category>
+		<Name>IMAP Service Status</Name>
+		<Description>Check the status of the IMAP services.</Description>
+		<IfInfoComments>IMAP service state and start mode information.</IfInfoComments>
+		<IfPassedComments></IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments></IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>IMAP002</Id>
+		<Category>IMAP</Category>
+		<Name>IMAP Secure Login</Name>
+		<Description>Check that insecure IMAP logins are not permitted.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>No IMAP services allow insecure logins.</IfPassedComments>
+		<IfWarningComments>One or more IMAP services may allow insecure logins.</IfWarningComments>
+		<IfFailedComments>One or more IMAP services allows insecure logins.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>IMAP003</Id>
+		<Category>IMAP</Category>
+		<Name>IMAP Protocol Logging</Name>
+		<Description>Check that IMAP protocol logging is not enabled.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>No IMAP services have protocol logging enabled.</IfPassedComments>
+		<IfWarningComments>One or more IMAP services has protocol logging enabled.</IfWarningComments>
+		<IfFailedComments></IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>DB001</Id>
+		<Category>Databases</Category>
+		<Name>Database Backups</Name>
+		<Description>Check that a database backup has been run in the last 24 hours.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>All mailbox databases have been backed up within the last 24 hours.</IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments>One or more Exchange databases has not been backed up within the last 24 hours.</IfFailedComments>
+	</Test>
+	
+	<Test>
+		<Id>AD001</Id>
+		<Category>Active Directory</Category>
+		<Name>AD Domain Level</Name>
+		<Description>Check that the domains are at the required level.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>All Active Directory domains meet the required functional level.</IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments>One or more Active Directory domains do not meet the required functional level.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>AD002</Id>
+		<Category>Active Directory</Category>
+		<Name>AD Forest Level</Name>
+		<Description>Check that the forest is at the required level.</Description>
+		<IfInfoComments></IfInfoComments>
+		<IfPassedComments>The Active Directory forest meets the required functional level.</IfPassedComments>
+		<IfWarningComments></IfWarningComments>
+		<IfFailedComments>The Active Directory forest does not meet the required functional level.</IfFailedComments>
+	</Test>
+
+	<Test>
+		<Id>HW001</Id>
+		<Category>Hardware</Category>
+		<Name>Physical or Virtual</Name>
+		<Description>Check whether the Exchange Server is Physical or Virtual.</Description>
+		<IfPassedComments></IfPassedComments>
+		<IfFailedComments></IfFailedComments>
+		<IfInfoComments>All Exchange servers are physical servers.</IfInfoComments>
+		<IfWarningComments>One or more Exchange servers are a virtual server.</IfWarningComments>
+	</Test>
+	
+  <Test>
+		<Id>WSSRV001</Id>
+		<Category>Windows Server</Category>
+		<Name>Exchange Install Volume Free Disk Space</Name>
+		<Description>Check that the Exchange install volume has 30% or greater free disk space.</Description>
+		<IfInfoComments></IfInfoComments>
+        <IfPassedComments>All Exchange install volumes have greater than 30% free disk space.</IfPassedComments>
+       	<IfWarningComments>One or more Exchange install volumes has between 15% and 30% free disk space.</IfWarningComments>		
+       	<IfFailedComments>One or more Exchange install volumes has less than 15% free disk space.</IfFailedComments>        
+	</Test>
+</Tests>
